@@ -24,7 +24,9 @@ require('./product.routes.js')(app);
 mongoose.Promise = global.Promise;
 
 // Connecting to the database
-mongoose.connect(config.url, {
+const DB = "mongodb+srv://roni:roni123456@mongo-jbw22.mongodb.net/test?retryWrites=true&w=majority";
+
+mongoose.connect(DB, {
     useNewUrlParser: true
 }).then(() => {
     console.log("Successfully connected to the database");    
